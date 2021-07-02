@@ -7,12 +7,13 @@ const Header: React.FC = () => {
             <div className="header">
                 <Link to="/">
                 <div className="logo">
-                    <img src="https://objectivegroup.com/wp-content/uploads/2020/10/Logo_objective-01-1.png" alt="" width="96px"/>
+                    <img src="https://www.objective.com.br/wp-content/uploads/2020/11/logo.svg" alt="" width="100px"/>
                 </div>
                 </Link>
-                <div className="candidato">
+                <div className="user">
                     <span><strong>Kalila Fontes</strong></span>
                     <span>Teste de Front-end</span>
+                    <div className="thumb-user">KF</div>
                 </div>
             </div>
         </>

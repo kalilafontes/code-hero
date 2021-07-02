@@ -14,6 +14,9 @@ const Home: React.FC = () => {
 
     const [personagem, setPersonagem] = useState<DataCharacters[]>([]);
     
+    /*  No useEffect é verificado se possui algum texto no campo de busca, 
+    caso não tenha ele realiza um get de todos os elementos, e se tiver ele busca em relação ao texto buscado seguindo o critério de 'iniciado por' 
+    que faz busca por um personagem que tenha nome iniciado com as palavras escritas na busca  */
     useEffect( () => {
 
         if(query === ''){
@@ -35,12 +38,14 @@ const Home: React.FC = () => {
        
     }, [query]);
 
+    /* As variáves criadas abaixo serão utilizadas para criar a paginação dos itens*/
     const indexOfLastPost = currentPage * postPerPage;
     const indexOfFirstPost = indexOfLastPost - postPerPage;
     const currentPosts = personagem.slice(indexOfFirstPost, indexOfLastPost);
 
     const paginate = (pageNumber:number)=> setCurrentPage(pageNumber);
 
+    /* A Home é coposta pelo Filtro(que representa o campo de busca), a listagem do elemento e a paginação. */
     return (
         <> 
             <Filter  

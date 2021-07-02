@@ -10,6 +10,9 @@ interface InputProps extends RouteComponentProps {
 
 const Details: React.FC <InputProps> = (props) => {
   const [personagem, setPersonagem] = useState<DataCharacters[]>([]);
+
+ /*  No useEffect é verificado se foi recebido o id como parâmentro e então inclui ele na url 
+  para que sejam buscados dados de determinado personagem */
   useEffect( () => {
     const id = props.match.url;
     if(id){

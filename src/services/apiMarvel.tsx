@@ -1,10 +1,13 @@
 import axios from 'axios';
 import md5 from 'md5';
 
+/* A api da Marvel possui uma particularidade quanto seu acesso, para utilizá-la é necessário seguir os critérios de acesso
+utilizando chame pública e privada disponibilizadas por eles. */
+
 const baseUrl = 'http://gateway.marvel.com/v1/public';
 
-const publicKey =  '4d285ed2c691a7cace74f5f94c4af48b';
-const privateKey =  '85cb0fa9dda2d3845fd8397c3c4bd27fa933bdbe';
+const publicKey =  '79ef90dee4d92e50763f6be154005c43';
+const privateKey =  '8583ffe953d149e5b8ef85857d6fc55150f41184';
 
 const time = Number(new Date());
 

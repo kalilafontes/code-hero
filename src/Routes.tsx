@@ -4,6 +4,8 @@ import App from './App';
 import Details from './screens/Details';
 
 export default function Routes() {
+
+  /* Como só serão exibidas duas telas diferente apenas se fez necessário o uso de duas rotas */
   return (
     <Router>
       <Route exact path="/" component={App} />
