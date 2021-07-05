@@ -190,11 +190,30 @@ body{
     flex-direction: row;
     place-content: center;
     margin: 10px 0px;
+    align-items: center;
     
 }
 
 .pagination li{
     list-style-type: none;
+    margin-left: 10px;
+}
+
+
+.pagination li:first{
+    margin-right: 2px;
+}
+
+.pagination li:last-child{
+    margin-left: 10px;
+}
+
+.pagination li button{
+    border: none;
+    color: #8E8E8E;
+    font-size: 12px;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .pagination li a{    
@@ -218,8 +237,14 @@ body{
     border-radius: 4px;    
 }
 
-.pagination__item--active a:hover, .pagination .page-link a:hover{   
-    opacity: 0.8;
+.pagination .disable-button{
+    display: none;
+}
+
+.pagination .page-link a:hover{   
+    background-color: #66ABF9 !important;  
+    color:#FFFFFF ; 
+    opacity: 1; 
 }
 
 @media (max-width: 800px)
